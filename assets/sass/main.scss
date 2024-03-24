@@ -1,0 +1,122 @@
+//C:\xampp\htdocs\frontSocialLinksProfile\assets\sass>sass --watch main.scss ../css\main.css
+
+// Media Querty
+$mediaMedium: 740px;
+
+// Medidas
+$card__altura: 90vh;
+$card__altura--plus: $card__altura;
+
+// Colore
+$color__p__green: hsl(75, 94%, 57%);
+$color__n__white: hsl(0, 0%, 100%);
+$color__n__grey: hsl(0, 0%, 20%);
+$color__n__grey--dark: hsl(0, 0%, 12%);
+$color__n__black--off: hsl(0, 0%, 8%);
+$color__n__black: hsl(0, 0%, 0%);
+
+// Fuente
+$font__size--global: 14px;
+$font__family: "Inter", sans-serif;
+$font__color: $color__n__white;
+$font__weight--s: 400;
+$font__weight--m: 600;
+$font__weight--l: 700;
+
+// Funcines
+@mixin button(){
+    width: 80%;
+    height: 13%;
+    border-style: none;
+    border-radius: 7px;
+    background-color: $color__n__grey;
+    color: $font__color;
+    font-weight: $font__weight--m;
+
+
+    transition: background-color 0.4s, color 0.4s;
+}
+
+// Base
+html{
+    background-color: $color__n__black;
+    font-size: $font__size--global;
+    font-family: $font__family;
+    color: $font__color;
+    height: 100%;
+}
+body{
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+// Tarjeta Padre
+.profile__wrapper{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 90%;
+    max-height: 900px;
+    // width: js;
+    max-width: 90%;
+    background-color: $color__n__black--off;
+    border-radius: 20px;
+    box-sizing: border-box;
+    padding: 20px;
+
+    .wrapper__img{
+        flex-grow: 2;
+        height: 13%;
+        img{
+            height: 100%;
+            object-fit: cover;
+            border-radius: 50%;
+        }
+    }
+    .wrapper__header{
+        flex-grow: 1;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        h1{
+            font-weight: $font__weight--l;
+            margin: 0;
+        }
+        p{
+            font-weight: $font__weight--m;
+            color: $color__p__green;
+        }
+    }
+    .wrapper__middle{
+        flex-grow: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        p{
+            font-weight: $font__weight--s;
+        }
+    }
+    .wrapper__buttons{
+        flex-grow: 10;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-evenly;
+        width: 100%;
+        button{
+            @include button();
+        }
+        button:hover{
+            background-color: $color__p__green;
+            color: $color__n__grey--dark;
+        }
+    }
+}
+
+
+@media only screen and (min-width: $mediaMedium){
+
+}

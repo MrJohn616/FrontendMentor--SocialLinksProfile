@@ -1,0 +1,44 @@
+// Agregar bloque de estilo (otro documento sass)
+@use 'bloqueExtra';
+
+// Variables sass
+$variableSass: aqua;
+
+// Uso de variables
+html{
+    // background-color: $variableSass;
+}
+
+// Anidacion
+body{
+    div{
+        //....
+    }
+    section{
+        //....
+    }
+}
+
+//mixins (funciones)
+@mixin nombreFuncion($var1, $var2){
+    background-color: $var1;
+    font-weight: $var2;
+}
+// Uso de mixes
+html{
+    @include nombreFuncion(white, bold)
+}
+
+// Operadores
+// Se pueden usar operadores matematicos sin usar "calc()"
+
+
+
+
+
+
+
+
+.hidde{
+    display: none;
+}
